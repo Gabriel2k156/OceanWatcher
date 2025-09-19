@@ -1,0 +1,220 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 600px;
+    height: 100vh;
+    width: 100%;
+    font-family: "Inter-ExtraBold", Helvetica;
+    background-repeat: no-repeat;
+}
+
+/* Tudo relacionado ao menu de Header */
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-color: #79a7e9;
+    background-repeat: no-repeat;
+    color: black;
+    width: 100%;
+    height: 100px;
+    flex-wrap: wrap;
+    z-index: 1000;
+    position: fixed;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 1;
+}
+
+.nav-bar.hidden{
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    list-style: none;
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.nav-menu a {
+    display: inline-block;
+    font-size: 20px;
+    font-weight:800;
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+    border-radius: 15px;
+    text-transform: uppercase;
+}
+
+.nav-menu a ::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    display: block;
+    background-color: rgba(1, 9, 11, 0.811);
+    transition: 0.3s;
+    margin: 0 auto;
+}
+
+.nav-menu a :hover::after {
+    display: block;
+    width: 100%;
+}
+
+/* Tudo relacionado aos Cards*/
+
+.container-sobre {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    z-index: 1;
+    background-image: url(/static/fundo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sobre-nos {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    font-weight:800;
+    background-color: rgba(0, 0, 0, 0.21);
+    border-radius: 30px;
+    padding: 30px;
+    max-height: 35rem;
+    max-width: 70rem;
+    min-width: 400px;
+}
+
+h2 {
+    font-size: 50px;
+    margin-left: 15px;
+    padding-bottom: 20px;
+    color: #79B7E9;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 23px;
+    margin-left: 15px;
+    color: white;
+}
+
+.container-impacto {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    z-index: 1;
+    background-image: url(/static/fundo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.impacto-ambiental {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: rgba(0, 0, 0, 0.21);
+    font-weight:800;
+    border-radius: 30px;
+    padding: 30px;
+    max-height: 35rem;
+    max-width: 70rem;
+    min-width: 400px;
+}
+
+/* Gráfico feito com o chartjs*/
+
+.container-grafico {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: url(/static/fundo3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grafico {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1 solid none;
+    border-radius: 30px;
+    height: 100%;
+    width: 30rem;
+    margin-left: 20px;
+}
+
+.container-apoie {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 100%;
+    gap: 20px;
+    z-index: 1;
+    background-image: url(/static/fundo4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.apoie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: rgba(0, 0, 0, 0.21);
+    font-weight:800;
+    border-radius: 30px;
+    padding: 0 30px;
+    height: 32rem;
+    max-width: 35rem;
+    min-width: 500px;
+}
+
+.logo-apoiadores {
+    width: 300px;
+    border-radius: 100%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-weight:800;
+    color: white;
+    height: 50px;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Ocean Watcher</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <img src="/static/segunda.png" alt="logo" style="width: 100px; align-items: end;" >
+        <ul class="nav-menu">
+            <a href="#sobre">
+                <li>Sobre</li>
+            </a>
+            <a href="#impacto">
+                <li>Impacto Ambiental</li>
+            </a>
+            <a href="#chartjs">
+                <li>Gráficos</li>
+            </a>
+            <a href="#apoie-causa">
+                <li>Apoiadores</li>
+            </a>
+        </ul>
+    </nav>
+
+    <section class="container-sobre" id="sobre">
+        <section class="sobre-nos">
+            <h2>Sobre nós</h2>
+            <p>O Grupo Vida Marinha tem como missão conscientizar a sociedade sobre os impactos da poluição nos oceanos.
+                <br>
+                Buscamos informar de forma clara e acessível, mostrando como esse problema evoluiu ao longo do tempo.
+                <br>
+                Para isso, utilizamos gráficos e representações visuais que revelam a gravidade da situação. <br>
+                Nosso objetivo é transformar informação em ação e incentivar atitudes sustentáveis. <br>
+                Proteger o mar é garantir equilíbrio ambiental e qualidade de vida para todos.
+            </p>
+
+        </section>
+    </section>
+
+    <section class="container-impacto" id="impacto">
+        <section class="impacto-ambiental">
+            <h2>Impacto Ambiental</h2>
+            <p>Nas últimas décadas, a poluição dos oceanos aumentou de forma alarmante. <br>
+                Antes restrita a resíduos próximos à costa, hoje milhões de toneladas de lixo chegam ao mar todos os
+                anos. <br>
+                O plástico e os microplásticos se espalharam pela água e já afetam inúmeras espécies marinhas. <br>
+                Esse avanço ameaça o equilíbrio ambiental e a saúde humana. <br>
+                Agir agora é essencial para proteger os oceanos e garantir o futuro do planeta.</p>
+
+        </section>
+
+    </section>
+    <div class="container-grafico" id="chartjs">
+        <div class="grafico">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+    <section class="container-apoie" id="apoie-causa">
+          <div class="container-card">
+            <img src="/static/logo-sea 1.png" alt="logo-sea" class="logo-apoiadores" style="cursor: pointer;" id="clicar-logo">
+            
+    </div>
+        <section class="apoie">
+            <h2 id="titulo">Apoie as ONGs</h2>
+            <p id="texto" onclick="ChamarTexto()">Cada gesto de apoio ajuda a manter viva a luta pela preservação marinha. <br>
+                As ONGs são fundamentais na conscientização, pesquisa e proteção da vida nos mares. <br>
+                Com o seu apoio, elas ganham força para combater a poluição e defender a biodiversidade. <br>
+                A união de pequenas ações pode gerar grandes transformações. <br>
+                Juntos, podemos garantir que as futuras gerações herdem um oceano mais limpo e saudável.</p>
+        </section>
+    </section>
+
+    <footer>
+        <p>© 2025 Grupo Vida Marinha</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
