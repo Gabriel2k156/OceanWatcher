@@ -13,9 +13,9 @@ def homepage():
 @app.route('/api/status', methods = ['GET'])
 def dados():
     dados = {
-        'plastico': [round(random.uniform(12,20),1) for _ in range(6)],
-        'metal': [round(random.uniform(10,18),2) for _ in range(6)],
-        'cigarro': [round(random.uniform(12,14),3) for _ in range(6)] 
+        'plastico': [30, 32, 31, 29, 33, round(random.uniform(20, 30),2)],
+        'metal': [12, 14, 13, 15, 16, round(random.uniform(10,18),2)],
+        'cigarro': [12.5, 12.8, 13, 12.9, 13.1, round(random.uniform(12,14),2)] 
     }
     return jsonify(dados)
 
