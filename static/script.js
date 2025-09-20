@@ -7,21 +7,21 @@ const grafico = new Chart(Grhapy, {
         labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
         datasets: [{
             label: "Plasticos",
-            data: [0,0,0,0,0,0],
+            data: 'plastico',
             borderWidth: 1,
             backgroundColor: "green",
             hoverBackgroundColor: "red",
         },
         {
             label: "Metal",
-            data: [0,0,0,0,0,0],
+            data: 'metal',
             borderWidth: 1,
             backgroundColor: "blue",
             hoverBackgroundColor: "orange"
         },
         {
             label: "Cigarro",
-            data: [0,0,0,0,0,0],
+            data: 'cigarro',
             borderWidth: 1,
             backgroundColor: "purple"
 
@@ -44,15 +44,15 @@ const grafico = new Chart(Grhapy, {
 function atualizarGrafico(){
     fetch("/api/status")
         .then(response => response.json())
-        .then(data => {
+        .then(dados => {
 
 
             // atualizar sempre as 6 colunas
-            grafico.data.datasets[0].data = data.plastico;
+            grafico.data.datasets[0].data = dados.plastico;
 
-            grafico.data.datasets[1].data = data.metal;
+            grafico.data.datasets[1].data = dados.metal;
 
-            grafico.data.datasets[2].data = data.cigarro;
+            grafico.data.datasets[2].data = dados.cigarro;
 
 
 
