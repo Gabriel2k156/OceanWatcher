@@ -8,6 +8,10 @@ html {
     scroll-behavior: smooth;
 }
 
+canvas {
+    background-color: #172936;
+}
+
 body {
     min-width: 600px;
     height: 100vh;
