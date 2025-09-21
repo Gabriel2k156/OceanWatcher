@@ -4,23 +4,23 @@ const Grhapy = document.getElementById('myChart').getContext("2d");
 const grafico = new Chart(Grhapy, {
     type: 'bar',
     data: {
-        labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
+        labels: ['2021','2022', '2023', '2024', '2025'],
         datasets: [{
-            label: "Plasticos",
+            label: "Plastico (Kg)",
             data: 'plastico',
             borderWidth: 1,
             backgroundColor: "green",
             hoverBackgroundColor: "red",
         },
         {
-            label: "Metal",
-            data: 'metal',
+            label: "Outros (T)",
+            data: 'outros',
             borderWidth: 1,
             backgroundColor: "blue",
             hoverBackgroundColor: "orange"
         },
         {
-            label: "Cigarro",
+            label: "APAGAR",
             data: 'cigarro',
             borderWidth: 1,
             backgroundColor: "purple"
@@ -50,7 +50,7 @@ function atualizarGrafico(){
             // atualizar sempre as 6 colunas
             grafico.data.datasets[0].data = dados.plastico;
 
-            grafico.data.datasets[1].data = dados.metal;
+            grafico.data.datasets[1].data = dados.outros;
 
             grafico.data.datasets[2].data = dados.cigarro;
 
@@ -115,9 +115,11 @@ Com o seu apoio, elas ganham força para combater a poluição e defender a biod
 A união de pequenas ações pode gerar grandes transformações.
 Juntos, podemos garantir que as futuras gerações herdem um oceano mais limpo e saudável.`;
 
-let textoSea = `Shepherd é uma marca/empresa que se destaca por seu compromisso com qualidade e inovação. 
-O nome “Shepherd” (que significa “pastor” em inglês) simboliza liderança, cuidado e orientação, 
-refletindo a missão de guiar seus clientes ou usuários com confiança e segurança.`;
+let textoSea = `Sea Shepherd é uma organização internacional de conservação marinha fundada em 
+1977, dedicada à proteção da vida marinha e à defesa dos oceanos contra a pesca ilegal, caça de 
+animais marinhos e destruição ambiental. Conhecida por suas ações diretas e campanhas ousadas, a 
+Sea Shepherd atua em todo o mundo para preservar espécies ameaçadas e promover a conscientização 
+sobre a importância dos ecossistemas marinhos.`;
 
 let tituloOriginal1 = "Apoie as ONGs"
 let tituloSea = "Sea Shepherd Brasil"
