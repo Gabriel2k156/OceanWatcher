@@ -8,9 +8,6 @@ html {
     scroll-behavior: smooth;
 }
 
-canvas {
-    background-color: #172936;
-}
 
 body {
     min-width: 600px;
@@ -37,7 +34,7 @@ body {
     opacity: 1;
 }
 
-.nav-bar.hidden{
+.nav-bar.hidden {
     transform: translateY(-100%);
     opacity: 0;
 }
@@ -55,7 +52,7 @@ body {
 .nav-menu a {
     display: inline-block;
     font-size: 20px;
-    font-weight:800;
+    font-weight: 800;
     color: white;
     text-decoration: none;
     padding: 0 15px;
@@ -101,7 +98,7 @@ body {
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    font-weight:800;
+    font-weight: 800;
     background-color: rgba(0, 0, 0, 0.21);
     border-radius: 30px;
     padding: 30px;
@@ -146,7 +143,7 @@ p {
     justify-content: start;
     align-items: start;
     background-color: rgba(0, 0, 0, 0.21);
-    font-weight:800;
+    font-weight: 800;
     border-radius: 30px;
     padding: 30px;
     max-height: 35rem;
@@ -158,8 +155,10 @@ p {
 
 .container-grafico {
     display: flex;
-    justify-content: start;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; /* centraliza quando quebrar */
+    align-items: center; 
     width: 100%;
     height: 100%;
     background-image: url(/static/fundo3.png);
@@ -169,14 +168,34 @@ p {
 
 .grafico {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    width: 60em;
+}
+
+canvas {
+    background-color: #172936;
+    width: 100%; 
+    max-width: 40em;
+    height: auto;
+}
+
+.grafico-texto{
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1 solid none;
+    align-items: start;
+    background-color: rgba(0, 0, 0, 0.21);
+    font-weight: 800;
     border-radius: 30px;
-    height: 100%;
-    width: 35rem;
-    margin-left: 20px;
+    padding: 0 30px;
+   
+    min-height: 3px;
+    max-width: 35rem;
+    min-width: 600px;
 }
+
 
 .container-apoie {
     position: relative;
@@ -200,10 +219,11 @@ p {
     justify-content: center;
     align-items: start;
     background-color: rgba(0, 0, 0, 0.21);
-    font-weight:800;
+    font-weight: 800;
     border-radius: 30px;
     padding: 0 30px;
     height: 32rem;
+    min-height: 600px;
     max-width: 35rem;
     min-width: 500px;
 }
@@ -213,12 +233,37 @@ p {
     border-radius: 100%;
 }
 
+
+
+
+
+.link-sea {
+    text-decoration: none;
+    color: #79B7E9;
+}
+
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: black;
-    font-weight:800;
+    font-weight: 800;
     color: white;
     height: 50px;
+}
+
+
+.logo-apoiadores {
+    animation: animate-outline 1s ease-in-out infinite;
+}
+
+@keyframes animate-outline {
+    from {
+        outline: 0px solid #4f9bf98a;
+    }
+
+    to {
+        outline: 15px solid #4f9bf900;
+    }
+
 }
