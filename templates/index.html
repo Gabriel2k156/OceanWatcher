@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,10 @@
     <link rel="shortcut icon" href="/static/primeira.png" type="image/x-icon">
     <title>Ocean Watcher</title>
 </head>
+
 <body>
     <nav class="nav-bar">
-        <img src="/static/segunda.png" alt="logo" style="width: 100px; align-items: end;" >
+        <img src="/static/segunda.png" alt="logo" style="width: 100px; align-items: end;">
         <ul class="nav-menu">
             <a href="#sobre">
                 <li>Sobre</li>
@@ -58,19 +60,27 @@
     <div class="container-grafico" id="chartjs">
         <div class="grafico">
             <canvas id="myChart"></canvas>
+
         </div>
+        <section class="grafico-texto">
+        <h2>A Dimensão da Poluição Marinha no Brasil</h2>
+        <p>Os gráficos abaixo apresentam dados sobre a quantidade
+            e os tipos de resíduos coletados em ações de limpeza de praias e rios no Brasil.
+            Essas informações ajudam a compreender quais materiais mais impactam o meio ambiente
+            e como o descarte inadequado contribui para a poluição marinha.</p>
+            </section>
     </div>
     <section class="container-apoie" id="apoie-causa">
-          <div class="container-card">
-            <img src="/static/logo-sea 1.png" alt="logo-sea" class="logo-apoiadores" style="cursor: pointer;" id="clicar-logo">
-            
-    </div>
+        <div class="container-card">
+            <img src="/static/logo-sea 1.png" alt="logo-sea" class="logo-apoiadores" style="cursor: pointer;"
+                id="clicar-logo">
+        </div>
         <section class="apoie">
             <h2 id="titulo">Apoie as ONGs</h2>
-            <p id="texto" onclick="ChamarTexto()">Cada gesto de apoio ajuda a manter viva a luta pela preservação marinha. <br>
-                As ONGs são fundamentais na conscientização, pesquisa e proteção da vida nos mares. <br>
-                Com o seu apoio, elas ganham força para combater a poluição e defender a biodiversidade. <br>
-                A união de pequenas ações pode gerar grandes transformações. <br>
+            <p id="texto">Cada gesto de apoio ajuda a manter viva a luta pela preservação marinha.
+                As ONGs são fundamentais na conscientização, pesquisa e proteção da vida nos mares.
+                Com o seu apoio, elas ganham força para combater a poluição e defender a biodiversidade.
+                A união de pequenas ações pode gerar grandes transformações.
                 Juntos, podemos garantir que as futuras gerações herdem um oceano mais limpo e saudável.</p>
         </section>
     </section>
