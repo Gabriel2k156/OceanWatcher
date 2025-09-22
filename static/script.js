@@ -1,6 +1,7 @@
 // Codigo onde trás o Gráfico com o JavaScript
 const Grhapy = document.getElementById('myChart').getContext("2d");
 
+
 const grafico = new Chart(Grhapy, {
     type: 'bar',
     data: {
@@ -19,26 +20,22 @@ const grafico = new Chart(Grhapy, {
             backgroundColor: "blue",
             hoverBackgroundColor: "orange"
         },
-        {
-            label: "APAGAR",
-            data: 'cigarro',
-            borderWidth: 1,
-            backgroundColor: "purple"
-
-
-
-        }
     ]
     },
     options: {
+
+
+       
+        },
+
+
+
         scales: {
             y: {
                 beginAtZero: true
             }
         }
-    }
-
-});
+    });
 
 // função para buscar dados e atualizar o grafico
 function atualizarGrafico(){
@@ -51,10 +48,6 @@ function atualizarGrafico(){
             grafico.data.datasets[0].data = dados.plastico;
 
             grafico.data.datasets[1].data = dados.outros;
-
-            grafico.data.datasets[2].data = dados.cigarro;
-
-
 
             grafico.update();
         })
@@ -119,7 +112,9 @@ let textoSea = `Sea Shepherd é uma organização internacional de conservação
 1977, dedicada à proteção da vida marinha e à defesa dos oceanos contra a pesca ilegal, caça de 
 animais marinhos e destruição ambiental. Conhecida por suas ações diretas e campanhas ousadas, a 
 Sea Shepherd atua em todo o mundo para preservar espécies ameaçadas e promover a conscientização 
-sobre a importância dos ecossistemas marinhos.`;
+sobre a importância dos ecossistemas marinhos. <br>
+<a href="https://seashepherd.org.br/doe?source=header-main" target="_blank" rel="noopener noreferrer" class="link-sea">Sea Shepherd Brasil</a>`;
+
 
 let tituloOriginal1 = "Apoie as ONGs"
 let tituloSea = "Sea Shepherd Brasil"
@@ -128,11 +123,11 @@ let mostrandoSea = false;
 
 function ChamarTexto() {
     if (mostrandoSea) {
-        original.textContent = textooriginal;
+        original.innerHTML = textooriginal;
         tituloOriginal.textContent = tituloOriginal1
         mostrandoSea = false;
     } else {
-        original.textContent = textoSea; 
+        original.innerHTML = textoSea; 
         tituloOriginal.textContent = tituloSea;
         mostrandoSea = true;
     }
